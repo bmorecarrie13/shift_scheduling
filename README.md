@@ -80,8 +80,8 @@ This project provides a Python-based optimization model for scheduling staff shi
     - `x_start[i][t]`: Binary variable indicating if staff `i` starts a shift at time `t`.
     - `x[i][t]`: Binary variable indicating if staff `i` is working at time `t`.
     - `x_ot[i][t]`: Binary variable indicating if staff `i` is working overtime at time `t`.
-    - `y[t]`: Binary variable for demand coverage at time `t`.
-    - `z[t]`: Binary variable for minimum staffing coverage at time `t`.
+    - `y1[t]`: Integer variable for demand shortage at time `t`, up to 1.
+    - `y2[t]`: Integer variable for demand shortage at time `t`, over 1 (to prioritise a demand shortfall of 1 in more hours than over more than 1 for a single hour).
 
 - **`add_constraints()`**:
   - Implements all constraints described above.
